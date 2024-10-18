@@ -1758,6 +1758,26 @@
                 "\"248;231;28\"",
                 "\"255;255;255\""
               ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "TxtScore",
+                "Text",
+                "=",
+                "\"SCORE: \"+ ToString(score)"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"Restart\""
+              ]
             }
           ]
         },
@@ -1805,6 +1825,56 @@
                 "TxtScore",
                 "=",
                 "SceneWindowWidth()/2-TxtScore.Width()/2"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreY"
+              },
+              "parameters": [
+                "TxtScore",
+                "=",
+                "SceneWindowHeight()/2-TxtScore.Height()/2 + TxtScore.Height() * 1.5"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Restart Game"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"Restart\"",
+                ">=",
+                "5"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Menu\"",
+                ""
               ]
             }
           ]
