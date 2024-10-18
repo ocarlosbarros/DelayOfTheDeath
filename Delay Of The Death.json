@@ -12,7 +12,7 @@
     "antialisingEnabledOnMobile": false,
     "folderProject": false,
     "orientation": "default",
-    "packageName": "com.example.gamename",
+    "packageName": "io.itch.ocarlosbarros.delayofthedeath",
     "pixelsRounding": false,
     "projectUuid": "4cdd3db9-e665-403a-bbf7-74f34a83cf39",
     "scaleMode": "linear",
@@ -21,10 +21,10 @@
     "useExternalSourceFiles": false,
     "version": "1.0.0",
     "name": "Delay Of The Death",
-    "description": "",
-    "author": "",
-    "windowWidth": 800,
-    "windowHeight": 600,
+    "description": "You cannot prevent aging (inevitable), but you can delay it by collecting beneficial items (delaying).\n\nEmbark on the journey of life in this game inspired by the videos \"Happiness\" and \"Rat Race\".",
+    "author": "Carlos Eduardo De Barros Souza",
+    "windowWidth": 1280,
+    "windowHeight": 720,
     "latestCompilationDirectory": "",
     "maxFPS": 60,
     "minFPS": 20,
@@ -50,8 +50,12 @@
       "placement": "bottom-left",
       "showWatermark": true
     },
-    "authorIds": [],
-    "authorUsernames": [],
+    "authorIds": [
+      "EfKXVgP9MLVcMgaYxTfBdCbQx183"
+    ],
+    "authorUsernames": [
+      "ocarlosbarros"
+    ],
     "categories": [],
     "playableDevices": [],
     "extensionProperties": [],
