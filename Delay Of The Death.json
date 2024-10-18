@@ -148,8 +148,8 @@
           "layer": "",
           "name": "Background",
           "persistentUuid": "5311d695-540b-4c87-9d1d-9144b7dc82cb",
-          "width": 1280,
-          "x": 0,
+          "width": 1500,
+          "x": -112,
           "y": 0,
           "zOrder": 0,
           "numberProperties": [],
@@ -164,8 +164,8 @@
           "layer": "",
           "name": "Middleground",
           "persistentUuid": "ce578baf-f8fd-48e7-9690-5814c0a0e246",
-          "width": 1280,
-          "x": 0,
+          "width": 1500,
+          "x": -112,
           "y": 210,
           "zOrder": 1,
           "numberProperties": [],
@@ -180,8 +180,8 @@
           "layer": "",
           "name": "ForeGround",
           "persistentUuid": "15072c29-912c-474a-a671-e3fe86778cb2",
-          "width": 1280,
-          "x": 0,
+          "width": 1500,
+          "x": -112,
           "y": 494,
           "zOrder": 2,
           "numberProperties": [],
@@ -210,7 +210,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "GameName",
+          "name": "TxtGameName",
           "persistentUuid": "42fdf566-3a9a-4faf-a2bb-7b5a5d86262d",
           "width": 0,
           "x": 157,
@@ -229,8 +229,8 @@
           "name": "BtnPlay",
           "persistentUuid": "aac93500-40a4-443d-af18-882537b5c6c5",
           "width": 0,
-          "x": 565,
-          "y": 293,
+          "x": 564,
+          "y": 271,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -245,8 +245,8 @@
           "name": "BtnExit",
           "persistentUuid": "85847459-c14e-4298-9176-c63b33506428",
           "width": 0,
-          "x": 576,
-          "y": 410,
+          "x": 564,
+          "y": 367,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -351,7 +351,7 @@
           "assetStoreId": "",
           "bold": true,
           "italic": false,
-          "name": "GameName",
+          "name": "TxtGameName",
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
@@ -487,7 +487,7 @@
             "objectName": "StreetLight"
           },
           {
-            "objectName": "GameName"
+            "objectName": "TxtGameName"
           },
           {
             "objectName": "BtnPlay"
@@ -498,6 +498,18 @@
         ]
       },
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "At the beginning of the Scene"
+        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -513,10 +525,193 @@
           "actions": [
             {
               "type": {
-                "value": "PlayerAuthentication::DisplayAuthenticationBanner"
+                "value": "TextObject::Text::SetOutlineEnabled"
               },
               "parameters": [
+                "TxtGameName",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::Text::SetOutlineEnabled"
+              },
+              "parameters": [
+                "BtnPlay",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::Text::SetOutlineEnabled"
+              },
+              "parameters": [
+                "BtnExit",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::Text::SetOutlineColor"
+              },
+              "parameters": [
+                "TxtGameName",
+                "\"0;0;0\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::Text::SetOutlineColor"
+              },
+              "parameters": [
+                "BtnPlay",
+                "\"0;0;0\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::Text::SetOutlineColor"
+              },
+              "parameters": [
+                "BtnExit",
+                "\"0;0;0\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::Text::SetOutlineThickness"
+              },
+              "parameters": [
+                "TxtGameName",
+                "=",
+                "5"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::Text::SetOutlineThickness"
+              },
+              "parameters": [
+                "BtnPlay",
+                "=",
+                "5"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::Text::SetOutlineThickness"
+              },
+              "parameters": [
+                "BtnExit",
+                "=",
+                "5"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::SetGradient"
+              },
+              "parameters": [
+                "TxtGameName",
+                "\"LINEAR_VERTICAL\"",
+                "\"208;2;27\"",
+                "\"245;166;35\"",
+                "\"248;231;28\"",
+                "\"255;255;255\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::SetGradient"
+              },
+              "parameters": [
+                "BtnPlay",
+                "\"LINEAR_VERTICAL\"",
+                "\"208;2;27\"",
+                "\"245;166;35\"",
+                "\"248;231;28\"",
+                "\"255;255;255\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::SetGradient"
+              },
+              "parameters": [
+                "BtnExit",
+                "\"LINEAR_VERTICAL\"",
+                "\"208;2;27\"",
+                "\"245;166;35\"",
+                "\"248;231;28\"",
+                "\"255;255;255\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Always"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "TxtGameName",
+                "=",
+                "SceneWindowWidth()/2-TxtGameName.Width()/2"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "BtnPlay",
+                "=",
+                "SceneWindowWidth()/2-BtnPlay.Width()/2"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "BtnExit",
+                "=",
+                "SceneWindowWidth()/2-BtnExit.Width()/2"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreY"
+              },
+              "parameters": [
+                "BtnPlay",
+                "=",
+                "SceneWindowHeight()/2-BtnPlay.Height()/2"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreY"
+              },
+              "parameters": [
+                "BtnExit",
+                "=",
+                "SceneWindowHeight()/2-BtnExit.Height()/2 + BtnExit.Height()"
               ]
             }
           ]
@@ -633,8 +828,8 @@
           "layer": "",
           "name": "Background",
           "persistentUuid": "5311d695-540b-4c87-9d1d-9144b7dc82cb",
-          "width": 1280,
-          "x": 0,
+          "width": 1500,
+          "x": -112,
           "y": 0,
           "zOrder": 0,
           "numberProperties": [],
@@ -649,8 +844,8 @@
           "layer": "",
           "name": "Middleground",
           "persistentUuid": "ce578baf-f8fd-48e7-9690-5814c0a0e246",
-          "width": 1280,
-          "x": 0,
+          "width": 1500,
+          "x": -112,
           "y": 210,
           "zOrder": 1,
           "numberProperties": [],
@@ -665,8 +860,8 @@
           "layer": "",
           "name": "ForeGround",
           "persistentUuid": "15072c29-912c-474a-a671-e3fe86778cb2",
-          "width": 1280,
-          "x": 0,
+          "width": 1500,
+          "x": -112,
           "y": 494,
           "zOrder": 2,
           "numberProperties": [],
@@ -934,8 +1129,8 @@
           "layer": "",
           "name": "Background",
           "persistentUuid": "5311d695-540b-4c87-9d1d-9144b7dc82cb",
-          "width": 1280,
-          "x": 0,
+          "width": 1500,
+          "x": -112,
           "y": 0,
           "zOrder": 0,
           "numberProperties": [],
@@ -950,8 +1145,8 @@
           "layer": "",
           "name": "Middleground",
           "persistentUuid": "ce578baf-f8fd-48e7-9690-5814c0a0e246",
-          "width": 1280,
-          "x": 0,
+          "width": 1500,
+          "x": -112,
           "y": 210,
           "zOrder": 1,
           "numberProperties": [],
@@ -966,8 +1161,8 @@
           "layer": "",
           "name": "ForeGround",
           "persistentUuid": "15072c29-912c-474a-a671-e3fe86778cb2",
-          "width": 1280,
-          "x": 0,
+          "width": 1500,
+          "x": -112,
           "y": 494,
           "zOrder": 2,
           "numberProperties": [],
@@ -986,6 +1181,38 @@
           "x": 910,
           "y": 219,
           "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "TxtGameOver",
+          "persistentUuid": "f8d9be27-260e-4dd8-80b8-444a8bfeaa12",
+          "width": 0,
+          "x": 399,
+          "y": 132,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "TxtScore",
+          "persistentUuid": "f7d3761a-32fc-4cdc-b5eb-26dab8acf0ed",
+          "width": 0,
+          "x": 473,
+          "y": 253,
+          "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1084,6 +1311,88 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "TxtGameOver",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "GAME OVER",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 90,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "GAME OVER",
+            "font": "",
+            "textAlignment": "left",
+            "characterSize": 90,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "TxtScore",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "SCORE: 0000 ",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 60,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "SCORE: 0000 ",
+            "font": "",
+            "textAlignment": "left",
+            "characterSize": 60,
+            "color": "255;255;255"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -1100,6 +1409,12 @@
           },
           {
             "objectName": "StreetLight"
+          },
+          {
+            "objectName": "TxtGameOver"
+          },
+          {
+            "objectName": "TxtScore"
           }
         ]
       },
@@ -1123,6 +1438,64 @@
               },
               "parameters": [
                 ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Always"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "TxtGameOver",
+                "=",
+                "SceneWindowWidth()/2-TxtGameOver.Width()/2"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreY"
+              },
+              "parameters": [
+                "TxtGameOver",
+                "=",
+                "SceneWindowHeight()/2-TxtGameOver.Height()/2"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "TxtScore",
+                "=",
+                "SceneWindowWidth()/2-TxtScore.Width()/2"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreY"
+              },
+              "parameters": [
+                "TxtScore",
+                "=",
+                "SceneWindowHeight()/2-TxtScore.Height()/2 + TxtScore.Height()"
               ]
             }
           ]
@@ -1198,6 +1571,10 @@
         {
           "name": "Scale",
           "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
         }
       ]
     }
