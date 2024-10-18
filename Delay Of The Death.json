@@ -112,7 +112,14 @@
     "folderName": "__ROOT"
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "folded": true,
+      "name": "score",
+      "type": "number",
+      "value": 1234
+    }
+  ],
   "layouts": [
     {
       "b": 209,
@@ -508,7 +515,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "At the beginning of the Scene"
+          "comment": "At the beginning of the scene"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -1646,6 +1653,18 @@
       },
       "events": [
         {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "At the beginning of the scene"
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -1660,10 +1679,84 @@
           "actions": [
             {
               "type": {
-                "value": "PlayerAuthentication::DisplayAuthenticationBanner"
+                "value": "TextObject::Text::SetOutlineEnabled"
               },
               "parameters": [
+                "TxtGameOver",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::Text::SetOutlineEnabled"
+              },
+              "parameters": [
+                "TxtScore",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::Text::SetOutlineColor"
+              },
+              "parameters": [
+                "TxtGameOver",
+                "\"0;0;0\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::Text::SetOutlineColor"
+              },
+              "parameters": [
+                "TxtScore",
+                "\"0;0;0\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::Text::SetOutlineThickness"
+              },
+              "parameters": [
+                "TxtGameOver",
+                "=",
+                "5"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::Text::SetOutlineThickness"
+              },
+              "parameters": [
+                "TxtScore",
+                "=",
+                "5"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::SetGradient"
+              },
+              "parameters": [
+                "TxtGameOver",
+                "\"LINEAR_VERTICAL\"",
+                "\"208;2;27\"",
+                "\"245;166;35\"",
+                "\"248;231;28\"",
+                "\"255;255;255\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::SetGradient"
+              },
+              "parameters": [
+                "TxtScore",
+                "\"LINEAR_VERTICAL\"",
+                "\"208;2;27\"",
+                "\"245;166;35\"",
+                "\"248;231;28\"",
+                "\"255;255;255\""
               ]
             }
           ]
@@ -1712,16 +1805,6 @@
                 "TxtScore",
                 "=",
                 "SceneWindowWidth()/2-TxtScore.Width()/2"
-              ]
-            },
-            {
-              "type": {
-                "value": "MettreY"
-              },
-              "parameters": [
-                "TxtScore",
-                "=",
-                "SceneWindowHeight()/2-TxtScore.Height()/2 + TxtScore.Height()"
               ]
             }
           ]
