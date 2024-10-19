@@ -2272,6 +2272,46 @@
         "name": "assets\\Caixa.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/Musics/Ludum Dare 50 (Trilha Sonora).mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\Musics\\Ludum Dare 50 (Trilha Sonora).mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Sounds/Ludum Dare 50 Remedio (Coletavel).mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\Sounds\\Ludum Dare 50 Remedio (Coletavel).mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Sounds/Ludum Dare 50 Pulo.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\Sounds\\Ludum Dare 50 Pulo.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Sounds/Ludum Dare 50 Morte (Coletavel Ruim) 2.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\Sounds\\Ludum Dare 50 Morte (Coletavel Ruim) 2.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -2747,6 +2787,19 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "PlayMusicCanal"
+              },
+              "parameters": [
+                "",
+                "assets\\Musics\\Ludum Dare 50 (Trilha Sonora).mp3",
+                "0",
+                "yes",
+                "20",
+                ""
+              ]
+            },
             {
               "type": {
                 "value": "TextObject::Text::SetOutlineEnabled"
@@ -3251,7 +3304,7 @@
       "name": "Main",
       "r": 209,
       "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
+      "stopSoundsOnStartup": false,
       "title": "",
       "v": 209,
       "uiSettings": {
@@ -13268,7 +13321,7 @@
       "name": "GameOver",
       "r": 209,
       "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
+      "stopSoundsOnStartup": false,
       "title": "",
       "v": 209,
       "uiSettings": {
@@ -14037,6 +14090,18 @@
                 "PlatformerObject",
                 "\"Jump\""
               ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets\\Sounds\\Ludum Dare 50 Pulo.mp3",
+                "",
+                "50",
+                ""
+              ]
             }
           ]
         },
@@ -14090,6 +14155,18 @@
                 "Player",
                 "PlatformerObject",
                 "\"Jump\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets\\Sounds\\Ludum Dare 50 Pulo.mp3",
+                "",
+                "50",
+                ""
               ]
             }
           ]
@@ -14538,6 +14615,27 @@
           "actions": [
             {
               "type": {
+                "value": "StopMusicCanal"
+              },
+              "parameters": [
+                "",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets\\Sounds\\Ludum Dare 50 Morte (Coletavel Ruim) 2.mp3",
+                "",
+                "50",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
               },
               "parameters": [
@@ -14714,6 +14812,18 @@
               },
               "parameters": [
                 "Coletable",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets\\Sounds\\Ludum Dare 50 Remedio (Coletavel).mp3",
+                "",
+                "50",
                 ""
               ]
             }
