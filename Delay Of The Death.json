@@ -14814,18 +14814,6 @@
                 "Coletable",
                 ""
               ]
-            },
-            {
-              "type": {
-                "value": "PlaySound"
-              },
-              "parameters": [
-                "",
-                "assets\\Sounds\\Ludum Dare 50 Remedio (Coletavel).mp3",
-                "",
-                "50",
-                ""
-              ]
             }
           ]
         },
@@ -14864,6 +14852,18 @@
               },
               "parameters": [
                 "Coletable",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets\\Sounds\\Ludum Dare 50 Remedio (Coletavel).mp3",
+                "",
+                "50",
                 ""
               ]
             },
